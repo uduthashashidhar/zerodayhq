@@ -120,7 +120,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-8">Meet Our Founders</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {[{ name: 'Udutha Shashidhar', role: 'Cybersecurity Expert & Founder', img: 'https://ik.imagekit.io/6cxgzqbqtn/IMG-20220606-WA0000-01_Original_1_100.jpg?updatedAt=1743056392569' }, { name: 'Jane Smith', role: 'Renowned industry leader in digital security and forensics.', img: 'https://via.placeholder.com/150https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' }].map((founder, index) => (
+            {[{ name: 'Udutha Shashidhar', role: 'Cybersecurity Expert & Founder', img: 'https://ik.imagekit.io/6cxgzqbqtn/IMG-20220606-WA0000-01_Original_1_100.jpg?updatedAt=1743056392569' }, { name: 'Smith', role: 'Renowned industry leader in digital security and forensics.', img: 'https://via.placeholder.com/150https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' }].map((founder, index) => (
               <motion.div
                 key={index}
                 className="bg-gray-800 p-6 rounded-lg"
