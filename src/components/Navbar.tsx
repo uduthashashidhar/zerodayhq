@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '/src/assets/logo.png'; // ✅ Use absolute path
-
+import Logo from '/src/assets/logo.png'; // ✅ Make sure the path is correct
 
 const Navbar = () => {
   const location = useLocation();
@@ -15,19 +14,22 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
-          {/* ✅ Replaced Shield icon with Your Logo */}
+          {/* ✅ Logo Section */}
           <Link to="/" className="flex items-center space-x-2">
             <img src={Logo} alt="ZeroDayHQ Logo" className="h-10 w-auto" />  
             <span className="text-xl font-bold text-white">ZeroDayHQ</span>
           </Link>
 
+          {/* ✅ Navigation Links */}
           <div className="hidden md:flex space-x-8">
             <Link to="/" className={`${isActive('/')} transition duration-300`}>Home</Link>
             <Link to="/about" className={`${isActive('/about')} transition duration-300`}>About</Link>
             <Link to="/services" className={`${isActive('/services')} transition duration-300`}>Services</Link>
+            <Link to="/blog" className={`${isActive('/blog')} transition duration-300`}>Blog</Link>
             <Link to="/contact" className={`${isActive('/contact')} transition duration-300`}>Contact</Link>
           </div>
           
+          {/* ✅ Call-to-Action Button */}
           <div className="hidden md:block">
             <Link
               to="/contact"

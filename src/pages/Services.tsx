@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, Lock, Code, Users, Server, Database, Cloud, Terminal, BugIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import bgImage from '../assets/back.gif'; 
 
 const services = [
   {
@@ -52,7 +53,7 @@ const Services = () => {
     <div className="min-h-screen bg-black text-white pt-16">
       {/* Hero Section */}
       <section className="relative py-20">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${bgImage})` }}></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">

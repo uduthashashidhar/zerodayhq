@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Award, Users, Target } from 'lucide-react';
+import bgImage from '../assets/background.gif'; // Import local background image
 
 const stats = [
   { number: 8, label: 'Years Experience' },
@@ -9,7 +10,7 @@ const stats = [
   { number: 24, label: 'Support', suffix: '/7' },
 ];
 
-const Counter = ({ value , suffix = '' }) => {
+const Counter = ({ value, suffix = '' }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -34,7 +35,11 @@ const About = () => {
     <div className="min-h-screen bg-black text-white pt-16">
       {/* Hero Section */}
       <section className="relative py-20">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-20"></div>
+        {/* Background Image from Local Assets */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20" 
+          style={{ backgroundImage: `url(${bgImage})` }}
+        ></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -120,7 +125,10 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-8">Meet Our Founders</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {[{ name: 'Udutha Shashidhar', role: 'Cybersecurity Expert & Founder', img: 'https://ik.imagekit.io/6cxgzqbqtn/IMG-20220606-WA0000-01_Original_1_100.jpg?updatedAt=1743056392569' }, { name: 'Smith', role: 'security and forensics.', img: 'https://via.placeholder.com/150https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' }].map((founder, index) => (
+            {[
+              { name: 'Udutha Shashidhar', role: 'Cybersecurity Expert & Founder', img: 'https://ik.imagekit.io/6cxgzqbqtn/IMG-20220606-WA0000-01_Original_1_100.jpg?updatedAt=1743056392569' }, 
+              { name: 'Smith', role: 'Security and Forensics', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' }
+            ].map((founder, index) => (
               <motion.div
                 key={index}
                 className="bg-gray-800 p-6 rounded-lg"

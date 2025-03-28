@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Shield, Award, BookOpen, Users, Target, Brain, CheckCircle, ArrowRight, Clock, Map } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import bgImage from '../assets/cybersecurity-bg.jpg'; // Ensure this image is in your assets folder
+import bgImage from '../assets/cybersecurity-bg.gif'; // Ensure this image is in your assets folder
 
 const certifications = [
   {
